@@ -2,6 +2,8 @@
 
 ![Created with - Google Apps Script](https://img.shields.io/static/v1?label=Created+with&message=Google+Apps+Script&color=blue)
 
-# Función personalizada para hojas de cálculo de Google OBTENERURL() 
+# Función personalizada para hdc de Google OBTENERURL() 
 
 Este repositorio recoge el código Apps Script desarrollado en el artículo [Cómo extraer los URL de los enlaces múltiples en las hojas de cálculo de Google con Apps Script](https://pablofelip.online/fx-personalizada-gas-extraer-url-enlaces-hdc/).
+
+![](https://user-images.githubusercontent.com/12829262/145258808-c6d28521-5467-48b2-b3ea-743d06cb79ed.png)
