@@ -37,12 +37,12 @@ function OBTENERENLACES(intervalo, todos = false, separador = ', ') {
     }
   } else {
     // [B] Procesar celda única
-    const runs = hdc.getRange(referencia).getRichTextValue();
-    // getRichTextValue() devuelve null cuando la celda no contiene texto, por esa razón se usa runs?.
+    const rtv = hdc.getRange(referencia).getRichTextValue();
+    // getRichTextValue() devuelve null cuando la celda no contiene texto, por esa razón se usa rtv?.
     if (todos) {
-      return runs?.getRuns().filter(run => run.getLinkUrl()).map(run => run.getLinkUrl()).join(separador);
+      return rtv?.getRuns().filter(run => run.getLinkUrl()).map(run => run.getLinkUrl()).join(separador);
     } else {
-      return runs?.getRuns().find(run => run.getLinkUrl())?.getLinkUrl();
+      return rtv?.getRuns().find(run => run.getLinkUrl())?.getLinkUrl();
     }
   }
 
