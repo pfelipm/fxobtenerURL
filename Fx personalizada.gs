@@ -28,7 +28,7 @@ function OBTENERENLACES(intervalo, todos = false, separador = ', ') {
   if (intervalo.map) {
     // [A] Procesar intervalo de celdas
     const rtvs = hdc.getRange(referencia).getRichTextValues();
-    // getRichTextValues() siempre devuelve un [][], pero todos sus elementos son de tipo getRichTextValue, aún cuando la celda no contiene texto
+    // getRichTextValues() siempre devuelve un [[]], pero todos sus elementos son de tipo getRichTextValue, aún cuando la celda no contiene texto
     // https://twitter.com/pfelipm/status/1459949065089789954
     if (todos) {
       return rtvs.map(rtvFila => rtvFila.map(rtvCelda => rtvCelda.getRuns().filter(run => run.getLinkUrl()).map(run => run.getLinkUrl()).join(separador)));
