@@ -22,7 +22,7 @@ function OBTENERENLACES(intervalo, todos = false, separador = ', ') {
   const hdc = SpreadsheetApp.getActiveSheet();
 
   // Truco: se obtiene el primer parámetro (literal de la referencia al intervalo) parseando el valor de la celda que contiene esta fórmula
-  const referencia = hdc.getActiveCell().getFormula().match(/\(([A-Za-z0-9:]+)/)?.[1];
+  const referencia = hdc.getActiveCell().getFormula().match(/\(([A-Za-z0-9:'! ]+)/)?.[1];
   if (!referencia) throw 'Especificación de rango no soportada.';
 
   if (intervalo.map) {
